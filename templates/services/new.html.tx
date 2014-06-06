@@ -1,0 +1,5 @@
+[% WRAPPER "layout/default.tx" %]
+
+<a href="[% c.url_for('services/new/form', service => 'bitbucket') %]"><img src="[% c.url_for('/img/bitbucket.png') %]"></a>
+
+[% END %]

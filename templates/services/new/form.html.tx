@@ -1,0 +1,18 @@
+[% WRAPPER "layout/default.tx" %]
+
+<h1>Butbucket</h1>
+
+BitbucketのコミットをPostするチャンネルを選択してください。
+
+<form action="[% c.url_for %]" method="post">
+<select name="channel_id">
+<option value="">チャンネルを選択</option>
+[% FOREACH channel IN channels %]
+<option value="[% channel.channel_id %]">[% channel.name %]</option>
+[% END %]
+</select>
+<input type="submit" value="追加">
+</form>
+
+
+[% END %]

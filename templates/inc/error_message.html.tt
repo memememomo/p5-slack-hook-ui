@@ -1,0 +1,9 @@
+[% IF error_messages -%]
+<div class="alert alert-error">
+  <ul class="unstyled">
+  [% FOREACH v=error_messages -%]
+  <li>[% v.raw %]</li>
+  [% END -%]
+  </ul>
+</div>
+[% END -%]

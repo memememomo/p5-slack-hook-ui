@@ -1,0 +1,14 @@
++{
+    'DBI' => [
+        'dbi:mysql:slackhook;mysql_socket=/tmp/mysql.sock',
+        '',
+        '',
+        {
+            mysql_enable_utf8   => 1,
+            RaiseError          => 1,
+        },
+    ],
+    Slack => {
+        api_token => '',
+    },
+};

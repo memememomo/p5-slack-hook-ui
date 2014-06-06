@@ -1,0 +1,40 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Bootstrap -->
+<link href="[% c.url_for('/bootstrap/css/bootstrap.min.css') %]" rel="stylesheet">
+<title>My Slack Hook</title>
+<style>
+body {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.navbar {
+  margin-bottom: 20px;
+}
+</style>
+</head>
+<body>
+<script src="[% c.url_for('/js/jquery.min.js') %]"></script>
+<div class="container">
+  <div class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="[% c.url_for('/') %]">MySlackHook</a>
+      </div>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="[% c.url_for('services/new') %]">作成</a></li>
+          <li><a href="[% c.url_for('services/index') %]">一覧</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div>[% content %]</div>
+</div>
+<script src="[% c.url_for('/bootstrap/js/bootstrap.min.js') %]"></script>
+</body>
+</html>

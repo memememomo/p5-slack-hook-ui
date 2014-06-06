@@ -1,0 +1,19 @@
+[% WRAPPER "layout/default.tx" %]
+
+<h1>[% title %]</h1>
+
+[% FOREACH l IN list %]
+<h2>[% l.service.name %]</h2>
+
+[% FOREACH h IN l.hooks %]
+<ul>
+  <li>
+    <a href="[% c.url_for('services/update', id => h.id) %]">[% IF h.lable %][% h.label %] [% END %][% h.botname %] として #[% h.channel.name %] にPostする。</a>
+    Created at [% h.created_at %]
+  </li>
+</ul>
+[% END %]
+
+[% END %]
+
+[% END %]

@@ -1,0 +1,10 @@
+[% IF c.flash('result_message') -%]
+
+<div class="alert[% IF c.flash('result_error') %] alert-error[% ELSE %] alert-success[% END %]">
+  <button type="button" class="close" data-dismiss="alert">×</button>
+  <div class="text-left">
+    [% c.flash('result_message') %]
+  </div>
+</div>
+
+[% END -%]

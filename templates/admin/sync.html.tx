@@ -1,0 +1,3 @@
+<form action="[% c.url_for %]" method="post">
+<input type="submit" value="同期">
+</form>
